@@ -1,0 +1,7 @@
+dependencies:
+  flutter:
+    sdk: flutter
+  nearby_service: ^latest_version # For P2P Mesh
+  hive: ^latest_version           # For Offline Knowledge Database
+  hive_flutter: ^latest_version
+  crypto: ^latest_version         # For Secure Trust ID
