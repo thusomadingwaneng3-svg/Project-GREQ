@@ -8,3 +8,31 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest # Uses a free Linux server from 
+
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Clones your repository onto the server
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17' # Required for modern Android builds
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable' # Uses the most reliable version of Flutter
+
+      - name: Install dependencies
+        run: flutter pub get # Downloads the packages for P2P and AI
+
+      - name: Build Debug APK
+        run: flutter build apk --debug # Creates the installable file
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GREQ-Android-Build
+          path: build/app/outputs/flutter-apk/app-debug.apk
