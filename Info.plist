@@ -1,0 +1,6 @@
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>GREQ uses Bluetooth to find nearby resources and bridge human needs without internet.</string>
+<key>NSLocalNetworkUsageDescription</key>
+<string>GREQ uses the local network to sync Trust Scores and Knowledge Seeds with peers.</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Location is required to map local resource imbalances in your immediate area.</string>
