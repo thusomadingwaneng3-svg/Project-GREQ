@@ -1,0 +1,10 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ "main" ] # Runs every time you push code to the 'main' branch
+  workflow_dispatch: # Allows you to manually trigger the build
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Uses a free Linux server from 
